@@ -20,6 +20,8 @@ squareBoard = [(2,2),(2,3),(3,2),(3,3)]
 glider :: Board
 glider = [(3,0),(3,1),(3,2),(2,2),(1,1)]
 
+bigBoard = [(1,0),(2,0),(3,0),(4,0),(5,0),(2,1),(3,1),(10,2),(11,2),(11,0),(-2,-4),(-2,-5),(-2,-6)]
+
 neighbors :: Cell -> [Cell]
 neighbors cell = 
   let deltas = [(-1,-1),(0,-1),(1,-1),(1,0),(1,1),(0,1),(-1,1),(-1,0)] 
@@ -59,7 +61,7 @@ next board = union (removeOverpopulatedCells $ removeStarvedCells board) (birthC
 
 -- play and display functions taken from
 -- https://github.com/nbartlomiej/gameofhaskell/blob/master/GameOfHaskell.hs
-main = play glider
+main = play bigBoard
 
 play :: Board -> IO ()
 play board = do

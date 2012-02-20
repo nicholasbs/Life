@@ -43,7 +43,7 @@ cellsWithLivingNeighbor board =
 
 deadCellsWithLivingNeighbor :: Board -> Board
 deadCellsWithLivingNeighbor living =
-  let all = cellsWithLivingNeighbor board
+  let all = cellsWithLivingNeighbor living
   in filter (\c -> not $ c `elem` living) all
 
 birthCells :: Board -> Board

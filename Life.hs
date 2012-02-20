@@ -49,7 +49,7 @@ deadCellsWithLivingNeighbor living =
 birthCells :: Board -> Board
 birthCells board =
   let potentialKids = deadCellsWithLivingNeighbor board
-  in foldl (\acc c -> if numLivingNeighbors board c == 3 then c:acc else acc) [] potentialKids
+  in foldl (\acc c -> if numLivingNeighbors board c == 3 then c : acc else acc) [] potentialKids
 
 removeStarvedCells board = filter (\c -> numLivingNeighbors board c >= 2) board
 

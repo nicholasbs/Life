@@ -8,8 +8,8 @@ type Cell = (Int, Int) -- a cell on the board
 type Board = [Cell]    -- a board is a list of living cells
 
 -- E.g., the board [(1,0),(2,0),(2,1),(5,0)] represents
--- _XXXXX_
--- __XX___
+-- _XX__X_
+-- __X____
 -- _______
 -- (the board extends infinitely);
 
